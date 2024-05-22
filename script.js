@@ -4,7 +4,7 @@ const para = document.querySelector("p");
 const imgName = document.querySelector("h1");
 const myImage = document.querySelector("img");
 
-import { veg, nonVeg, fruits } from "/food.js";
+import { veg, nonVeg, fruits } from "./food.js";
 let i = 0;
 myImage.src = fruits[i];
 para.textContent = i;
