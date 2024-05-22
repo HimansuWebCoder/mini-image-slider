@@ -6,7 +6,11 @@ const myImage = document.querySelector("#image");
 const nav2 = document.querySelector("#nav2");
 const nav1 = document.querySelector("#nav1");
 
+<<<<<<< HEAD
 import { fruits } from "./food.js";
+=======
+import { veg, nonVeg, fruits } from "./food.js";
+>>>>>>> bc8bf1907aded6bade8407645c3c15bcd4ceb7f0
 let i = 0;
 myImage.src = fruits[i];
 para.textContent = i;
