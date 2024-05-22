@@ -16,8 +16,4 @@ const fruits = [
 	"images/chicken.jpg",
   ];
 
-<<<<<<< HEAD
   export { fruits };
-=======
-  export { fruits, veg, nonVeg};
->>>>>>> bc8bf1907aded6bade8407645c3c15bcd4ceb7f0
