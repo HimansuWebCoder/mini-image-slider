@@ -1,8 +1,8 @@
 const fruits = [
-	"images/apple.jpeg",
-	"images/lichi.jpg",
-	"images/mango.jpeg",
-	"images/orange.jpg",
+	"/images/apple.jpeg",
+	"/images/lichi.jpg",
+	"/images/mango.jpeg",
+	"/images/orange.jpg",
   ];
   const veg = [
 	"images/brinjal.jpeg",
