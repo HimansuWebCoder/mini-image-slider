@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        height: auto;
+        border: 1px solid black;
+        padding: 10px;
+        margin: auto;
+        background-color: rgb(185, 183, 183);
+        border: none;
+        box-shadow: 3px 3px 4px black;
+      }
+
+      p,
+      button {
+        font-size: 3rem;
+        border-radius: 10%;
+        border-color:blue;
+      }
+
+      button:active {
+        color: white;
+        background-color: black;
+      }
+
+      p {
+        margin-left: 200px;
+      }
+
+      img {
+        width: 15rem;
+        height: 15rem;
+        position: relative;
+        left: 100px;
+        top: 100px;
+      }
+
+      img {
+        border: 10px solid blue;
+      }
+      
+      img:active {
+        transform: scale(1.1, 1.1);
+        transition: all linear 0.5s;
+      }
+      
+      p {
+        position: relative;
+        top: 3rem;
+        z-index: 5;
+      }
+
+      h1 {
+        position: relative;
+        top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="decre">decrement</button>
+      <button class="incre">increment</button>
+      <h1></h1>
+      <img src="" alt="" />
+      <p></p>
+    </div>
+    <script type="module">
+      const forward = document.querySelector(".incre");
+      const backward = document.querySelector(".decre");
+      const para = document.querySelector("p");
+      const imgName = document.querySelector("h1");
+      const myImage = document.querySelector("img");
+
+      import { veg, nonVeg, fruits } from "/food.js";
+      let i = 0;
+      myImage.src = fruits[i];
+      para.textContent = i;
+      imgName.textContent = fruits[i]
+      forward.addEventListener("pointerup", incre);
+      backward.addEventListener("pointerup", decre);
+      
+      myImage.addEventListener("click", incre)
+      
+      function incre() {
+        if (i < fruits.length - 1) {
+          i++;
+          myImage.src = fruits[i];
+          myImage.alt = fruits[i];
+          para.textContent = i
+          imgName.textContent = fruits[i]
+        } else if (i <= fruits.length) {
+          i = 0;
+          myImage.src = fruits[i];
+          imgName.textContent = fruits[i]
+        }
+      }
+      
+      function decre() {
+        if (i > 0) {
+          i--;
+          myImage.src = fruits[i];
+          imgName.textContent = fruits[i]
+        } else if (i <= 0) {
+          i = fruits.length - 1;
+          myImage.src = fruits[i];
+          imgName.textContent = fruits[i]
+        }
+      }
+      </script>
+  </body>
+</html>
