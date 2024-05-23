@@ -16,11 +16,6 @@ button {
   border-color: blue;
 }
 
-button:active {
-  color: white;
-  background-color: black;
-}
-
 p {
   margin-left: 200px;
 }
